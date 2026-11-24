@@ -2,7 +2,7 @@
 
 **J. Manuel Oliveira**
 
-This preprint develops a geometric framework connecting expanded relativity and quantum mechanics through three-dimensional vectorial time and Flag-and-Pole dynamics.
+This preprint develops a geometric framework connecting expanded relativity and quantum mechanics through three-dimensional vectorial time.
 
 [Read the paper](https://joliverapps.github.io/ExpandedTheoryOfRelativity/)
 
