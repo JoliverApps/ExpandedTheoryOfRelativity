@@ -77,14 +77,13 @@
       output.setAttribute('aria-label', 'Total not available yet');
     } finally { output.setAttribute('aria-busy', 'false'); }
   }
-  // Reading a public total is separate from sending a visit or click event.
+  // Reading the public total does not record a visit.
   if (analytics.public_totals) {
     publicTotal(analytics.path, 'visit-count');
-    publicTotal(analytics.event, 'pdf-count');
   }
   const optedOut = navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true;
   if (optedOut) return;
-  window.goatcounter = {path: analytics.path, referrer: ''};
+  window.goatcounter = {path: analytics.path, referrer: '', no_events: true};
   const tracker = document.createElement('script');
   tracker.async = true;
   tracker.src = 'https://gc.zgo.at/count.js';
