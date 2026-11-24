@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and identify the revision you consulted."
+type: article
+title: "On a Geometric Origin of Quantum Mechanics from Expanded Relativity"
+authors:
+  - family-names: Oliveira
+    given-names: J. Manuel
+url: "https://joliverapps.github.io/ExpandedTheoryOfRelativity/"
+repository-code: "https://github.com/JoliverApps/ExpandedTheoryOfRelativity"

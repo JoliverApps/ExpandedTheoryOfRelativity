@@ -1,0 +1,85 @@
+
+\section{Results}
+\subsection{Anomalous Propagation-Orthogonal Geometric-Sources}
+In the adapted basis, using $U=\rho(\mathbf{U})$, $\hat{U}=U/c$, $R=\rho(\mathbf{R})$, $\mathfrak{i}=\rho(\mathbf{i})=i\Sigma_{z}$, and $X^{\ddagger}=\Gamma^{0}X^{\dagger}\Gamma^{0}$, we establish in Appendix~\ref{appx_general_matrix_source} that the general matrix solution to the propagation-orthogonality constraint for an even-grade element of the algebra takes the form $R_{\mathrm{e}}=\frac{1}{2}f(\tau)\left(A_{\mathrm{e}}+\hat{U}A_{\mathrm{e}}\hat{U}\right)$, subject to $[U,R_{\mathrm{e}}]=0$, where $A_{\mathrm{e}}\in M_{8}(\mathbb{C})$ is an even seed matrix satisfying $KA_{\mathrm{e}}K=A_{\mathrm{e}}$, with $K=\sigma_z\otimes\gamma_5$.
+
+Writing $h_{\mu\nu}=-\frac{1}{q\chi}\mathfrak{i}\rho([\boldsymbol{\nabla}_{\mu},\boldsymbol{\nabla}_{\nu}])$, the gauge curvature $F=\rho(\mathbf{F})$ takes the matrix form
+\begin{equation}
+    F=\frac{1}{2}\left(I_{2}\otimes\gamma^{\mu}\gamma^{\nu}\right)h_{\mu\nu},\quad h_{\mu\nu}=-h_{\nu\mu}.
+\end{equation}
+For the electromagnetic Abelian field strength $F_{\mathrm{EM}}$, for which $h_{\mu\nu}$ has real coefficients, the seed
+\begin{equation}
+    A_{\mathrm{B}}=\mathfrak{i}F_{\mathrm{EM}}
+\end{equation}
+satisfies the even seed condition $KA_{\mathrm{B}}K=A_{\mathrm{B}}$, and the solution
+\begin{equation}
+    R_{\mathrm{B}}=\frac{1}{2}f(\tau)\left(A_{\mathrm{B}}+\hat{U}A_{\mathrm{B}}\hat{U}\right),\quad f(\tau)\in\mathbb{R},
+\end{equation}
+further satisfies
+\begin{equation}
+    R_{\mathrm{B}}^{\ddagger}=R_{\mathrm{B}},\quad [U,R_{\mathrm{B}}]=0,\quad [\mathfrak{i},R_{\mathrm{B}}]=0,
+\end{equation}
+while the electromagnetic gauge-transformation law ensures gauge covariance, fulfilling the requirements for an admissible PO-source.
+
+The curvature projection isolates the magnetic bivector relative to $\hat{U}$,
+\begin{equation}\label{eq_projected_magnetic_matrix}
+    B=\frac{1}{2}\left(F_{\mathrm{EM}}+\hat{U}F_{\mathrm{EM}}\hat{U}\right) \implies R_{\mathrm{B}}=\mathfrak{i}f(\tau)B,
+\end{equation}
+retaining three independent spatial bivector components in the propagation rest frame, with the squared magnetic-field magnitude
+\begin{equation}
+    |B|^{2}\coloneqq-\frac{1}{8}\operatorname{tr}\left(B^{2}\right) \ge 0.
+\end{equation}
+Since $(\mathfrak{i}B)^2=|B|^2I_8$, choosing a real function $f(\tau)=qa(|B|^2)$ gives the magnetic anomalous-moment source
+\begin{equation}\label{eq_nonlinear_magnetic_source}
+    R_{\mathrm{B}}=\mathfrak{i}qa(|B|^2)B, \quad a(|B|^2)\in\mathbb{R},
+\end{equation}
+where $q$ is the electric charge of the matter field. With $B=\rho(\mathbf{B})$, the corresponding abstract source is
+\begin{equation}
+    \mathbf{R}_{\mathrm{B}}=\mathbf{i}qa\mathbf{B}, \quad R_{\mathrm{B}}=\rho(\mathbf{R}_{\mathrm{B}}),
+\end{equation}
+where the argument of $a$ is suppressed for brevity.
+
+Because $\mathbf{i}$ and $\mathbf{B}$ are bivectors in mutually orthogonal subspaces, $\mathbf{R}_{\mathrm{B}}$ has grade four in the full Clifford algebra, while its simplest dependence on the electromagnetic field strength is linear. Its lowest-order nonlinear polynomial extension is
+\begin{equation}\label{eq_cubic_magnetic_source}
+    R_{\mathrm{B}}=\mathfrak{i}q\left(a_0+a_2|B|^2\right)B, \quad a_0,a_2\in\mathbb{R},
+\end{equation}
+where $a_0$ and $a_2$ are dimensional constants. The additional term is cubic in the magnetic field because $|B|^2\mathfrak{i}B=(\mathfrak{i}B)^3$. We take $a_0\neq0$ to retain the simplest nonzero linear interaction as the leading contribution; setting $a_2=0$ recovers that linear solution exactly.
+
+\subsubsection{Weak-Field Pauli Interaction and Schwinger Limit}
+For $a_{0}\neq0$, the ratio of the cubic to the linear contribution is $|a_{2}/a_{0}|\,|B|^2$, so the weak-field approximation gives
+\begin{equation}
+    R_{\mathrm{B}}\simeq \mathfrak{i}a_{0}qB,\quad |B|\ll\sqrt{\left|\frac{a_{0}}{a_{2}}\right|}.
+\end{equation}
+Sector preservation, together with the block-diagonal electromagnetic covariant derivative, allows Eq.~\eqref{eq_fundamental_matrix} to separate into particle and antiparticle sectors. For a configuration purely magnetic in the propagation rest frame, restriction to the positive Flag-time sector gives
+\begin{equation}
+    H_{B}\Psi_+=i\hbar\partial_t\Psi_+,
+\end{equation}
+with
+\begin{equation}\label{eq_magnetic_test_hamiltonian}
+    \begin{split}
+        H_{B}={}&c\boldsymbol{\alpha}\cdot\left[-i\hbar\nabla-q\boldsymbol{A}\right]\\
+        &+\beta mc^2+q\Phi I_4+iqa_{0}c\beta B,
+    \end{split}
+\end{equation}
+where $\beta\coloneqq\gamma^0$, $\alpha^j\coloneqq\gamma^0\gamma^j$, and $B_j=(\nabla\times\boldsymbol{A})_j$; in this Hamiltonian, $B$ denotes its $4\times4$ positive-sector block. Comparison with the magnetic Dirac--Pauli interaction~\cite{pauli1941_relativistic} identifies the weak-field anomalous coupling as $a_{\mathrm{weak}}=2\kappa a_{0}$, so that
+\begin{equation}
+    a_{0}=\frac{a_{\mathrm{weak}}}{2\kappa}.
+\end{equation}
+For the electron, matching to Schwinger's leading QED result~\cite{schwinger1948_magnetic_moment} gives
+\begin{equation}
+    a_{\mathrm{0}}^{\mathrm{electron}}=\frac{\alpha}{4\pi\kappa_{\mathrm{electron}}},
+\end{equation}
+where $\alpha$ is the fine-structure constant.
+
+\subsubsection{The Nonminimal Cubic Solution for Anomalous Response}
+The cubic extension also has an established effective-field-theory counterpart. In the same purely magnetic sector, $F_{\alpha\beta}F^{\alpha\beta}=2|B|^2$ and $iB=\frac{1}{2}\sigma^{\mu\nu}F_{\mu\nu}$, where $\sigma^{\mu\nu}\coloneqq\frac{i}{2}[\gamma^\mu,\gamma^\nu]$. Defining
+\begin{equation}
+    O_5=\bar{\Psi}_+\sigma^{\mu\nu}\Psi_+F_{\mu\nu},\quad O_9=(F_{\alpha\beta}F^{\alpha\beta})O_5,
+\end{equation}
+the contribution of the PO-source becomes
+\begin{equation}
+    -\chi\bar{\Psi}_+R_+\Psi_+=-\frac{q\chi a_{0}}{2}O_5-\frac{q\chi a_{2}}{4}O_9,
+\end{equation}
+where $R_+$ is the positive Flag-time restriction of $R_{\mathrm{B}}$ and $\chi=1/\hbar$. These operators have canonical mass dimensions five and nine, respectively. The linear dipole operator appears in Eq.~(3.29) of Ref.~\cite{li2021_left_dim9}, while $O_9$ is a Hermitian combination of the cubic operators listed in Eqs.~(3.488) and (3.513) and their conjugates.
+
+Thus, both the Pauli interaction and the cubic magnetic coupling featured in effective field theories arise directly within the algebraic solution space of propagation orthogonality. In standard QED, the Pauli structure appears through radiative corrections to the electromagnetic vertex, with Schwinger's leading contribution supplied by a finite one-loop Pauli form factor~\cite{schwinger1948_magnetic_moment}; the present framework yields the Pauli and cubic magnetic operator structures algebraically from propagation orthogonality.

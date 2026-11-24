@@ -1,0 +1,12 @@
+_build/
+_site/
+__pycache__/
+*.aux
+*.bbl
+*.blg
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*Notes.bib

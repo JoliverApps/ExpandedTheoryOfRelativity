@@ -1,0 +1,231 @@
+
+\section{Fundamentals of Flag Dynamics}\label{ch_EqOfMotion}
+\subsection{Temporal-Frame Rotation and the Planck--de Broglie Relations}\label{ch_temporal_rotation_momentum}
+Applying the chain rule to Eq.~\eqref{eq_starting_rotor_evolution} gives
+\begin{equation}
+    \frac{\mathrm{d}\boldsymbol{\omega}_{tF}}{\mathrm{d}\tau} = \frac{\mathrm{d}X^{\mu}}{\mathrm{d}\tau}\partial_{\mu}\boldsymbol{\omega}_{tF} = U^{\mu}\partial_{\mu}\boldsymbol{\omega}_{tF},\quad \frac{\mathrm{d}\theta^{t}}{\mathrm{d}\tau} = U^{\mu}\partial_{\mu}\theta^{t},
+\end{equation}
+and defining the local angular covector as
+\begin{equation}
+    K_{\mu} \coloneqq \partial_{\mu}\theta^{t},
+\end{equation}
+puts the temporal-frame evolution into the form
+\begin{equation}\label{eq_parallel_transport}
+    U^{\mu}\left(\partial_{\mu} + \mathbf{i}_{F}K_{\mu}\right)\boldsymbol{\omega}_{tF} = 0.
+\end{equation}
+The covector $K_{\mu}$ acts as the wave four-covector of the Flag-time roll, measuring the local rate of Plane-of-Now rotation along the four-dimensional transport path through
+\begin{equation}\label{eq_flag_angle_differential}
+    \mathrm{d}\theta^{t} = K_{\mu}\mathrm{d}X^{\mu}.
+\end{equation}
+The corresponding local Hamilton--Jacobi description is determined by the Hamilton principal function $S(X^{\mu})$, whose on-shell differential is
+\begin{equation}\label{eq_action_differential}
+    \mathrm{d}S = \partial_{\mu}S\mathrm{d}X^{\mu} = P_{\mu}\mathrm{d}X^{\mu},
+\end{equation}
+where
+\begin{equation}\label{eq_def_canonical_momentum}
+    P_{\mu} \coloneqq \partial_{\mu}S
+\end{equation}
+is the canonical momentum conjugate to displacement.
+
+For a free inertial particle, both $P_{\mu}$ and $K_{\mu}$ are constant, so the corresponding scalar increments vary linearly along the same inertial trajectory and are therefore proportional to one another, giving $\Delta S=\xi\Delta\theta^{t}$ with constant $\xi$. Because these inertial relations are strictly linear, the proportionality remains valid in the infinitesimal limit, giving
+\begin{equation}\label{eq_action_temporalangle_relation}
+    \mathrm{d}S = \xi\mathrm{d}\theta^{t}.
+\end{equation}
+In the free rest configuration, both covectors are purely temporal, so this relation establishes the local correspondence
+\begin{equation}\label{eq_momentum_wavevector}
+    \partial_{\mu}S = \xi\partial_{\mu}\theta^{t} \implies P_{\mu} = \xi K_{\mu}.
+\end{equation}
+Since both quantities transform as four-covectors, this proportionality holds in every inertial frame and, again by the comoving inertial frames corollary, extends locally to any observer in flat spacetime. Decomposing them into their standard components,
+\begin{equation}
+    P_{\mu} = \left(\frac{E}{c}, -\mathbf{p}\right),\quad K_{\mu} = \left(\frac{\omega}{c}, -\mathbf{k}\right),
+\end{equation}
+gives
+\begin{equation}
+    E = \xi\omega,\quad \mathbf{p} = \xi\mathbf{k},
+\end{equation}
+so identification with the Planck--de Broglie relations fixes the empirical proportionality scale,
+\begin{equation}
+    \xi = \hbar.
+\end{equation}
+Writing the canonical four-momentum as
+\begin{equation}
+    P_{\mu} = mU_{\mu} + q_{\beta}A_{\mu}^{\beta},
+\end{equation}
+allows the gauge contribution to be incorporated into the gauge-covariant geometric derivative
+\begin{equation}
+    \boldsymbol{\nabla}_{\mu} \coloneqq \partial_{\mu} + \frac{\mathbf{i}_{F}}{\hbar}q_{\beta}A_{\mu}^{\beta},
+\end{equation}
+so substituting $K_{\mu} = P_{\mu}/\hbar$ into Eq.~\eqref{eq_parallel_transport} and using $U^{\mu}U_{\mu} = c^{2}$ yields the mass-scaled transport relation
+\begin{equation}\label{eq_transport_mass}
+    \left(U^{\mu}\boldsymbol{\nabla}_{\mu} + \mathbf{i}_{F}\frac{mc^{2}}{\hbar}\right)\boldsymbol{\omega}_{tF} = 0.
+\end{equation}
+
+\subsection{Clifford Form and the geometric-source}
+In Eq.~\eqref{eq_transport_mass}, the four-velocity contracts with the derivative of the rotor field rather than acting algebraically on the field itself. Recasting the transport law into Clifford form allows the equation to be projected along the propagation direction, shifting this dependence into a direct algebraic action. Because the four-velocity possesses a fixed invariant norm, this algebraic action can be resolved via projectors onto its propagation eigenspaces, effectively eliminating the explicit four-velocity dependence. As a byproduct of this geometric reformulation, a propagation-orthogonal geometric-source (PO-Source) emerges that is absent in the standard Dirac equation.
+
+For a spinor realization, take
+\begin{equation}
+    \mathbf{i}_{F} \to \mathbf{i}\in\mathfrak{su}(2),\quad \mathbf{i}^{2} = -1,\quad [\mathbf{i}, \mathbf{e}_{\mu}] = 0.
+\end{equation}
+Introducing the four-velocity vector and the Clifford covariant derivative,
+\begin{equation}
+    \mathbf{U} \coloneqq \mathbf{e}_{\mu}U^{\mu},\quad \mathbf{D}^{\flat} \coloneqq \mathbf{e}^{\mu}\boldsymbol{\nabla}_{\mu},\quad \mathbf{e}^{\mu} \coloneqq \eta_{\mathrm{4D}}^{\mu\nu}\mathbf{e}_{\nu},
+\end{equation}
+Eq.~\eqref{eq_transport_mass} can be recast into the geometric form
+\begin{equation}\label{eq_transport_geometric}
+    \mathbf{U}\cdot\left(\mathbf{i}\mathbf{D}^{\flat} - \frac{m}{\hbar}\mathbf{U}\right)\boldsymbol{\omega}_{t} = 0.
+\end{equation}
+Since Eq.~\eqref{eq_transport_geometric} constrains only the contraction along $\mathbf{U}$, the uncontracted Clifford expression need not vanish. Denoting this expression by the Clifford geometric-source $\mathbf{G}$ separates the transport law into the equivalent system
+\begin{subequations}\label{eq_rotor_geometric_source_system}
+    \begin{align}
+        \left(\mathbf{i}\mathbf{D}^{\flat} - \frac{m}{\hbar}\mathbf{U}\right)\boldsymbol{\omega}_{t} &= \mathbf{G},\label{eq_source_field_def}\\
+        \mathbf{U}\cdot\mathbf{G} &= 0.\label{eq_G_field_constraint}
+    \end{align}
+\end{subequations}
+These relations define distinct solution problems. Eq.~\eqref{eq_G_field_constraint} determines the admissible PO-sources independently of the rotor equation, while Eq.~\eqref{eq_source_field_def} determines the rotor evolution for a specified $\mathbf{G}$. Every pair $(\boldsymbol{\omega}_{t}, \mathbf{G})$ satisfying this system thus solves Eq.~\eqref{eq_transport_geometric}. Conversely, every solution of Eq.~\eqref{eq_transport_geometric} generates such a pair through Eq.~\eqref{eq_source_field_def}.
+
+The choice $\mathbf{G} = 0$ immediately satisfies Eq.~\eqref{eq_G_field_constraint} and defines the geometric-source-free sector, whose propagation projection recovers two decoupled Dirac equations for the particle and antiparticle sectors. Geometrically, the compatible rotor leaves a vector parallel to the causal Pole invariant while acting nontrivially on transverse structures.
+
+Parameterizing the Clifford geometric-source by a left-acting Clifford operator $\mathbf{R}$,
+\begin{equation}\label{eq_G_R_definition}
+    \mathbf{G} \coloneqq \frac{1}{\hbar}\mathbf{R}\boldsymbol{\omega}_{t},
+\end{equation}
+gives the sourced Clifford rotor equation
+\begin{equation}\label{eq_clifford_rotor}
+    \left(\mathbf{i}\mathbf{D}^{\flat} - \frac{m}{\hbar}\mathbf{U} - \frac{1}{\hbar}\mathbf{R}\right)\boldsymbol{\omega}_{t} = 0,
+\end{equation}
+and, because the compatible rotor is even and satisfies $[\mathbf{U},\boldsymbol{\omega}_{t}]=0$, its invertibility reduces the propagation-orthogonality constraint to
+\begin{equation}\label{eq_R_field_constraint}
+    \left(\mathbf{U}\cdot\mathbf{R}\right)\boldsymbol{\omega}_{t} = 0 \implies \mathbf{U}\cdot\mathbf{R} = 0.
+\end{equation}
+The field-action reality condition derived from the Lagrangian formulation in Appendix~\ref{appx_spinor_lagrangian} further requires
+\begin{equation}
+    \mathbf{I}_{t}\mathbf{R}^{\dagger}\mathbf{I}_{t} = -\mathbf{R} \iff \mathbf{e}_{0}\mathbf{R}^{\dagger}\mathbf{e}_{0} = -\mathbf{i}\mathbf{R}\mathbf{i},
+\end{equation}
+which, for an operator preserving the Plane-of-Now sectors through $[\mathbf{i}, \mathbf{R}] = 0$, simplifies to
+\begin{equation}
+    \mathbf{e}_{0}\mathbf{R}^{\dagger}\mathbf{e}_{0} = \mathbf{R}.
+\end{equation}
+Under a local change of field frame, with the Clifford basis transported by conjugation,
+\begin{equation}
+    \boldsymbol{\omega}_{t}' = \mathbf{g}\boldsymbol{\omega}_{t},\quad \mathbf{i}' = \mathbf{g}\mathbf{i}\mathbf{g}^{-1},\quad \mathbf{R}' = \mathbf{g}\mathbf{R}\mathbf{g}^{-1},
+\end{equation}
+the geometric-source transforms covariantly,
+\begin{equation}
+    \mathbf{G}' = \frac{1}{\hbar}\mathbf{R}'\boldsymbol{\omega}_{t}' = \mathbf{g}\mathbf{G},
+\end{equation}
+while $\mathbf{U}'=\mathbf{g}\mathbf{U}\mathbf{g}^{-1}$ preserves the corresponding source constraint. Transformations preserving the selected generator satisfy $[\mathbf{g},\mathbf{i}]=0$, giving $\mathbf{i}'=\mathbf{i}$, and those preserving the propagation frame also satisfy $[\mathbf{g},\mathbf{U}]=0$.
+
+\subsubsection{Removal of the Explicit Four-Velocity Dependence through Projection}
+Introducing the matrix representations of the operators in Eq.~\eqref{eq_clifford_rotor},
+\begin{equation}
+    D^{\flat} \coloneqq \rho(\mathbf{D}^{\flat}),\quad U \coloneqq \rho(\mathbf{U}),\quad R \coloneqq \rho(\mathbf{R}),
+\end{equation}
+right-multiplication of its represented form by the fixed initial module element $\Psi_{0}$ converts the temporal-rotor evolution equation into an equation for the dynamically evolved module field $\Psi = w_{t}\Psi_{0}$,
+\begin{equation}\label{eq_clifford_module}
+    \mathfrak{i}D^{\flat}\Psi - \frac{m}{\hbar}U\Psi - \frac{1}{\hbar}R\Psi = 0.
+\end{equation}
+The algebraic action $U\Psi$ can then be resolved on the eigenspaces of the normalized propagation matrix
+\begin{equation}
+    \hat{\mathbf{U}}\coloneqq\frac{\mathbf{U}}{c}, \quad \hat{U} =\rho(\hat{\mathbf{U}})= \frac{U}{c},\quad \hat{U}^{2} = I,
+\end{equation}
+using the complementary projectors
+\begin{equation}
+    \Pi_{\pm} \coloneqq \frac{1}{2}\left(I \pm \hat{U}\right),\quad \Pi_{\pm}^{2} = \Pi_{\pm},\quad \Pi_{\pm}\Pi_{\mp} = 0.
+\end{equation}
+For a solution belonging to either propagation eigenspace,
+\begin{equation}
+    \Pi_{\pm}\Psi = \Psi \implies \hat{U}\Psi = \pm\Psi \implies U\Psi = \pm c\Psi,
+\end{equation}
+so, substitution into Eq.~\eqref{eq_clifford_module} using the short-hand notations
+\begin{equation}
+    \kappa \coloneqq \frac{mc}{\hbar}, \quad \chi \coloneqq \frac{1}{\hbar},
+\end{equation}
+replaces the algebraic four-velocity action by its eigenvalue and yields the generalized field equation
+\begin{equation}\label{eq_clifford_field}
+    \left(\mathfrak{i}D^{\flat} \mp \kappa I_{8} - \chi R\right)\Psi = 0.
+\end{equation}
+
+\subsection{The Spinor Field Equation and the Dirac Limit}
+\label{ch_spinor_matrix_representation}
+The spinor field equation follows directly from Eq.~\eqref{eq_clifford_field} by specifying an explicit matrix realization of $Cl(3,3)$. In the adapted temporal basis $\mathbf{e}_{4} = \mathbf{e}_{0}$, choose
+\begin{equation}
+    \rho(\mathbf{e}_{\mu}) = I_{2} \otimes \gamma_{\mu},\quad \mu \in \{0, 1, 2, 3\},
+\end{equation}
+for the four-dimensional translational sector and
+\begin{equation}
+    \rho(\mathbf{e}_{5}) = \sigma_{x} \otimes \gamma_{5},\quad \rho(\mathbf{e}_{6}) = \sigma_{y} \otimes \gamma_{5},
+\end{equation}
+for the Plane-of-Now basis vectors. The corresponding rotation generator is therefore
+\begin{equation}
+    \mathfrak{i} = \rho(\mathbf{e}_{5})\rho(\mathbf{e}_{6}) = i\Sigma_{z},\quad \Sigma_{z} \coloneqq \sigma_{z} \otimes I_{4}.
+\end{equation}
+In the same basis,
+\begin{equation}
+    \rho(\mathbf{e}^{\mu}) = \eta_{\mathrm{4D}}^{\mu\nu}\rho(\mathbf{e}_{\nu}) = I_{2} \otimes \gamma^{\mu},\quad \gamma^{\mu} \coloneqq \eta_{\mathrm{4D}}^{\mu\nu}\gamma_{\nu},
+\end{equation}
+so the mixed operator takes the form
+\begin{equation}\label{eq_spinor_gamma_definition}
+    \rho(\mathbf{i}\mathbf{e}^{\mu}) = i\Gamma^{\mu},\quad \Gamma^{\mu} \coloneqq \sigma_{z} \otimes \gamma^{\mu}.
+\end{equation}
+The gauge-covariant derivative is likewise represented block-diagonally as
+\begin{equation}\label{eq_spinor_covariant_derivative}
+    D_{\mu} \coloneqq \rho(\boldsymbol{\nabla}_{\mu}) = \begin{bmatrix}I_{4}D_{\mu}^{+} & 0 \\ 0 & I_{4}D_{\mu}^{-}\end{bmatrix},\quad \mathfrak{i}D^{\flat} = i\Gamma^{\mu}D_{\mu}
+\end{equation}
+with
+\begin{equation}\label{eq_sector_covariant_derivatives}
+    D_{\mu}^{\pm} = \partial_{\mu} \pm \frac{i}{\hbar}q_{\beta}A_{\mu}^{\beta}.
+\end{equation}
+Accordingly, the physical column field is built from two stacked Dirac spinors, while the represented geometric-source operator takes the corresponding block form,
+\begin{equation}
+    \Psi = \begin{bmatrix}\Psi_{+} \\ \Psi_{-}\end{bmatrix},\quad R = \begin{bmatrix}R_{++} & R_{+-} \\ R_{-+} & R_{--}\end{bmatrix},
+\end{equation}
+and Eq.~\eqref{eq_clifford_field} becomes
+\begin{equation}\label{eq_fundamental_matrix}
+    \left(i\Gamma^{\mu}D_{\mu} \mp \kappa I_{8} - \chi R\right)\Psi = 0.
+\end{equation}
+This system contains two Dirac spinors with conjugate gauge phases. For $R = 0$, the blocks decouple into particle and antiparticle sectors, with the lower block brought to the standard Dirac form by $\Psi_{-} \mapsto \gamma_{5}\Psi_{-}$. Their conjugate gauge couplings arise from the opposite temporal rotations generated by $\mathfrak{i} = i\Sigma_{z}$ and remain independent of the propagation branches $U\Psi = \pm c\Psi$, so both sectors coexist on the same future-directed branch.
+
+A nonzero geometric-source $\mathbf{R}$ that commutes with the Plane-of-Now bivector, $[\mathbf{i},\mathbf{R}]=0$, preserves the two sectors and decouples this equation into two Dirac equations with extra terms from the geometric-source. Conversely, if this condition is not achieved, the two sectors become rigidly coupled, as in the case of an isospin interaction examined in the Lagrangian formulation in Appendix~\ref{appx_spinor_lagrangian}.
+
+Finally, the geometric-algebra isomorphism
+\begin{equation}
+    Cl(3,3) \cong M_{8}(\mathbb{R})
+\end{equation}
+shows that the underlying Clifford algebra admits an eight-dimensional real matrix representation. In the complex basis used here, the reality of the corresponding spinor module is expressed by
+\begin{equation}
+    \Psi_{-}=\gamma_{5}C\bar{\Psi}_{+}^{\mathsf T},
+\end{equation}
+where $C$ is the charge-conjugation matrix. The Pauli and Dirac matrices therefore make the connection to conventional spinor equations transparent while retaining the real Clifford structure.
+
+\subsection{Universal Second-Order Equation and Pauli Structure}
+\label{ch_quadratic_pauli_structure}
+For the future-directed propagation branch, define the mass-geometric-source operator
+\begin{equation}
+    M \coloneqq \kappa I_{8} + \chi R,
+\end{equation}
+so that acting on Eq.~\eqref{eq_clifford_field} with the complementary operator $\mathfrak{i}D^{\flat} + M$ and multiplying the resulting equation by $-1$ gives the second-order wave equation
+\begin{equation}\label{eq_2order_full_source}
+    \left(D^{\mu}D_{\mu} + \mathfrak{i}q \chi F + \left[\mathfrak{i}D^{\flat}, M\right] + M^{2}\right)\Psi = 0,
+\end{equation}
+where, for a gauge sector with nonzero coupling $q$, the represented gauge-covariant field-strength is
+\begin{equation}\label{eq_general_field_strength_bivector}
+    F \coloneqq \rho(\mathbf{F}),\quad \mathbf{F} \coloneqq -\frac{\mathbf{i}}{2q\chi}\mathbf{e}^{\mu}\mathbf{e}^{\nu}[\boldsymbol{\nabla}_{\mu}, \boldsymbol{\nabla}_{\nu}].
+\end{equation}
+For simultaneous gauge sectors, $qF$ denotes the sum $\sum_{r}q_{r}F^{(r)}$, with this definition applied separately to the covariant derivatives of each gauge sector $r$. The gauge-curvature term supplies the minimal Pauli interaction, while the commutator and quadratic terms generated by $R$ describe the differential and algebraic contributions of the geometric-source, opening an additional physical channel for nonminimal magnetic-moment corrections and their non-Abelian analogues.
+
+Unlike the first-order equation, whose differential operator $D^{\flat} = \rho(\mathbf{e}^{\mu})D_{\mu}$ explicitly carries the represented translational Clifford basis and therefore constrains the field to a compatible module, the second-order equation has the representation-independent principal operator $D^{\mu}D_{\mu}$. It consequently admits realization on any admissible field space $V_{F} \cong \mathbb{C}^{F}$ with $\mathfrak{i} \in \mathfrak{u}(F)$ for which $qF$, $M$, and the commutator contribution act consistently on that space.
+
+For $R = 0$, Eq.~\eqref{eq_2order_full_source} reduces to the standard quadratic Dirac--Pauli form,
+\begin{equation}
+    \left(D^{\mu}D_{\mu} + \mathfrak{i}q \chi F + \kappa^2 \right)\Psi = 0,
+\end{equation}
+whose $\mathfrak{su}(2)$ spinor realization yields the baseline expectation $g = 2$, while in the scalar realization of the same geometric-source-free sector,
+\begin{equation}
+    \mathfrak{i} \to i \in \mathfrak{u}(1),\quad \Psi \to \psi \in \mathbb{C},
+\end{equation}
+the bivector spin action is trivial, so the quadratic equation reduces to the Klein--Gordon equation
+\begin{equation}
+    \left(D^{\mu}D_{\mu} + \kappa^{2}\right)\psi = 0.
+\end{equation}
+Although introduced as shorthand notation, the mass-geometric-source composition operator $M = \kappa I_{8} + \chi R$ hints at a profound relationship between mass and solutions to the propagation-orthogonality problem. In Appendix~\ref{appx_spinor_lagrangian}, we show that this relationship is no coincidence: mass, the Yukawa interaction, the isospin interaction, and non-minimal field-strength solutions explaining anomalous moments can all be derived from a total PO-source satisfying $\mathbf{U}\cdot \mathbf{R}_{\mathrm{total}} = 0$ under the gauge-covariance and reality conditions given above.
