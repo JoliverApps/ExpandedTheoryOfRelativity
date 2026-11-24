@@ -3,6 +3,7 @@
 from pathlib import Path
 from lxml import etree, html
 import argparse
+import hashlib
 import io
 import os
 import re
@@ -104,7 +105,8 @@ def finish_website(html_dir):
             target.parent.mkdir(exist_ok=True)
             shutil.copy2(html_dir / file, target)
             link.set('href', 'assets/' + file)
-    etree.SubElement(head, 'link', rel='stylesheet', href='assets/paper.css')
+    css_version = hashlib.sha256((ROOT / 'web/paper.css').read_bytes()).hexdigest()[:12]
+    etree.SubElement(head, 'link', rel='stylesheet', href=f'assets/paper.css?v={css_version}')
     etree.SubElement(head, 'link', rel='canonical', href=SITE_URL)
     abstract = document.xpath('//*[contains(concat(" ",@class," ")," ltx_abstract ")]')[0]
     abstract_text = ' '.join(''.join(abstract.itertext()).split())
