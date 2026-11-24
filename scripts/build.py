@@ -2,6 +2,7 @@
 """Build the manuscript PDF and the complete reader website from the LaTeX source."""
 from pathlib import Path
 from lxml import etree, html
+from reader import enhance_reader
 import argparse
 import hashlib
 import io
@@ -153,6 +154,7 @@ def finish_website(html_dir):
             wrapper = etree.Element('div', {'class': 'equation-scroll'})
             parent.replace(node, wrapper)
             wrapper.append(node)
+    enhance_reader(document, ROOT)
     output = etree.tostring(document, method='html', encoding='unicode', doctype='<!DOCTYPE html>')
     (ROOT / 'index.html').write_text(output)
     shutil.copy2(ROOT / 'web/paper.css', ROOT / 'assets/paper.css')
