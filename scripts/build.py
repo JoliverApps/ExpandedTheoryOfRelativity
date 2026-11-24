@@ -122,6 +122,10 @@ def finish_website(html_dir):
     if toc:
         sidebar = etree.Element('aside', {'class': 'reader-contents', 'aria-label': 'Contents'})
         toc[0].getparent().remove(toc[0])
+        contents_list = toc[0].find('ol')
+        if contents_list is not None:
+            entry = etree.SubElement(contents_list, 'li', {'class': 'ltx_tocentry'})
+            etree.SubElement(entry, 'a', href='#bib').text = 'References'
         sidebar.append(toc[0])
         body.insert(1, sidebar)
     # REVTeX's optional author/year bibitem metadata is parsed separately by
@@ -136,6 +140,8 @@ def finish_website(html_dir):
         footer.getparent().remove(footer)
     # Ensure SVG text and shapes keep the original figure proportions.
     for svg in document.xpath('//*[local-name()="svg"]'):
+        if not svg.get('viewBox'):
+            svg.set('viewBox', f'0 0 {svg.get("width")} {svg.get("height")}')
         svg.set('role', 'img')
         svg.set('aria-label', 'Flag-and-Pole geometric framework')
     for node in document.xpath('//*[contains(concat(" ",@class," ")," ltx_equation ") or contains(concat(" ",@class," ")," ltx_equationgroup ")]'):
