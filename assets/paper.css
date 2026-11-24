@@ -35,6 +35,12 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .reader-statistics dt{font-weight:400}.reader-statistics dd{font-weight:650;margin:0;font-variant-numeric:tabular-nums}
 .reader-statistics p{font-size:11px;line-height:1.65;color:var(--muted);margin:14px 0 0}
 .reader-statistics p a{display:inline}
+.reader-contents>.reading-options{margin:0 0 18px;padding:0 0 14px;border-top:0;border-bottom:1px solid var(--line)}
+#paper .reader-statistics{margin:0;padding:16px 0;font:13px/1.6 system-ui,sans-serif}
+#paper .reader-statistics dl{display:flex;flex-wrap:wrap;gap:8px 30px}
+#paper .reader-statistics dl div{display:flex;gap:12px;margin:0}
+#paper .reader-statistics p{margin:8px 0 0;font-size:11px}
+.ltx_bibitem,.ltx_bibitem a,.ltx_bibitem span{overflow-wrap:anywhere;white-space:normal}
 .ltx_figure svg{background:#fff;color:#111;border-radius:4px;padding:12px}
 .equation-scroll{overscroll-behavior-x:contain}
 .ltx_personname a,.ltx_contact{overflow-wrap:anywhere}
