@@ -81,6 +81,7 @@ def prepare_web_source(pdf_dir, web_dir):
     text = re.sub(r'\\usepackage\{xparse\}.*?(?=\\usepackage\{amsthm\})', '', text, flags=re.S)
     text = text.replace('\\usepackage[cal=boondox]{mathalfa}', '')
     text = text.replace('\\preprint{APS/123-QED}', '')
+    text = text.replace('\\input{LatestVersionNote}', '')
     text = text.replace('\\begin{document}', '\\begin{document}\n'
                         '\\setcitestyle{numbers,square}\n'
                         '\\renewcommand{\\thesubsection}{\\Alph{subsection}}\n'
@@ -118,7 +119,7 @@ def finish_website(html_dir):
     dates = document.xpath('//*[contains(concat(" ",@class," ")," ltx_dates ")]')
     if dates:
         etree.SubElement(head, 'meta', name='citation_date', content=''.join(dates[0].itertext()).strip('() '))
-    top = html.fragment_fromstring(f'''<header class="reader-header"><a class="site-name" href="./">Expanded Theory of Relativity</a><nav aria-label="Paper formats"><a class="pdf-button" href="{NAME}.pdf" download>Download PDF</a><a href="{REPO_URL}/blob/main/{NAME}.tex">LaTeX source</a><a href="{REPO_URL}/commits/main/">Version history</a></nav></header>''')
+    top = html.fragment_fromstring(f'''<header class="reader-header"><a class="site-name" href="./">Expanded Theory of Relativity</a><nav aria-label="Paper formats"><a class="pdf-button" href="{NAME}.pdf" download>Download PDF</a></nav></header>''')
     body.insert(0, top)
     toc = document.xpath('//nav[contains(@class,"ltx_TOC")]')
     if toc:
