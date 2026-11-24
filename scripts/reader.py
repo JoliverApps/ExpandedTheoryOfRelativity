@@ -47,7 +47,7 @@ def enhance_reader(document, root):
       </select>
       <noscript>Use your browser's zoom and colour settings to adjust the page.</noscript>
     </details>''')
-    sidebar.append(options)
+    sidebar.insert(0, options)
     status = etree.SubElement(sidebar, 'p', {'id': 'reader-status', 'class': 'sr-only', 'role': 'status'})
     status.text = ''
     for table in document.xpath('//table[contains(@class,"ltx_eqn_table")]'):
@@ -64,6 +64,8 @@ def enhance_reader(document, root):
     for keyword_block in document.xpath('//*[contains(concat(" ",@class," ")," ltx_keywords ")]'):
         label = etree.Element('span', {'class': 'sr-only'})
         label.text = 'Keywords: '
+        label.tail = keyword_block.text
+        keyword_block.text = None
         keyword_block.insert(0, label)
     for link in document.xpath('//a[contains(@class,"pdf-button")]'):
         link.set('type', 'application/pdf')
@@ -85,13 +87,12 @@ def enhance_reader(document, root):
                  'path': '/ExpandedTheoryOfRelativity/', 'event': 'expanded-relativity-pdf-download'}
     if site and analytics['public_totals']:
         statistics = html.fragment_fromstring('''<section class="reader-statistics" aria-labelledby="statistics-title">
-          <h2 id="statistics-title">Readership</h2>
+          <h2 id="statistics-title" class="sr-only">Readership</h2>
           <dl><div><dt>Visits</dt><dd id="visit-count" aria-busy="true" aria-label="Total not available yet">—</dd></div>
           <div><dt>PDF download clicks</dt><dd id="pdf-count" aria-busy="true" aria-label="Total not available yet">—</dd></div></dl>
-          <p>Totals update periodically.</p>
-          <p>Cookie-free aggregate statistics. <a href="https://www.goatcounter.com/help/privacy" rel="noreferrer">Privacy</a></p>
+          <p>Cookie-free aggregate statistics. Totals update periodically. <a href="https://www.goatcounter.com/help/privacy" rel="noreferrer">Privacy</a></p>
         </section>''')
-        sidebar.append(statistics)
+        document.xpath('//*[contains(concat(" ",@class," ")," ltx_abstract ")]')[0].addprevious(statistics)
     config = etree.SubElement(body, 'script', {'id': 'reader-config', 'type': 'application/json'})
     config.text = json.dumps({'analytics': analytics}).replace('<', '\\u003c')
     script = root / 'web/reader.js'
