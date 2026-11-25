@@ -65,3 +65,20 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
   .skip-links,.reading-options,.reader-statistics{display:none!important}
   .ltx_figure svg{padding:0}.ltx_p{color:#000}
 }
+
+/* Measured anomalies: clear column spacing and restrained journal-style rules. */
+.measurement-table{margin:30px 0 34px;text-align:left}
+.measurement-table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.measurement-table-scroll:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.measurement-table .ltx_tabular{width:100%;min-width:640px;border-collapse:collapse;border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);font-size:calc(16px * var(--reader-scale));line-height:1.55;font-variant-numeric:tabular-nums}
+.measurement-table th,.measurement-table td{padding:15px 18px;vertical-align:middle;white-space:nowrap;text-align:right}
+.measurement-table thead th{font-family:system-ui,sans-serif;font-weight:600;font-size:calc(14px * var(--reader-scale));color:var(--ink);background:color-mix(in srgb,var(--accent) 7%,var(--paper));border-bottom:1px solid var(--line)}
+.measurement-table th:first-child{text-align:left}
+.measurement-table tbody th{font-weight:400}
+.measurement-table tbody tr+tr{border-top:1px solid var(--line)}
+.measurement-table tbody tr:nth-child(even){background:color-mix(in srgb,var(--accent) 3%,var(--paper))}
+.measurement-table .ltx_cite{font-size:.85em;margin-left:.2em}
+.measurement-table .ltx_caption{margin:14px 0 0;line-height:1.65}
+.measurement-table .ltx_tag_table{font-weight:700}
+@media(max-width:580px){.measurement-table th,.measurement-table td{padding:13px 15px}}
+@media print{.measurement-table{break-inside:avoid}.measurement-table-scroll{overflow:visible}.measurement-table .ltx_tabular{min-width:0;font-size:10pt}.measurement-table thead th{font-size:9pt}.measurement-table th,.measurement-table td{padding:9px 12px}}
