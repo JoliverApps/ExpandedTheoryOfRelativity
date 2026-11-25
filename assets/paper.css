@@ -78,7 +78,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .measurement-table tbody tr+tr{border-top:1px solid var(--line)}
 .measurement-table tbody tr:nth-child(even){background:color-mix(in srgb,var(--accent) 3%,var(--paper))}
 .measurement-table .ltx_cite{font-size:.85em;margin-left:.2em}
-.measurement-table .ltx_caption{margin:14px 0 0;line-height:1.65;text-align:left}
+.measurement-table .ltx_caption{margin:0 0 14px;line-height:1.65;text-align:left}
 .measurement-table .ltx_tag_table{font-weight:700}
 @media(max-width:580px){.measurement-table th,.measurement-table td{padding:13px 15px}}
 @media print{.measurement-table{break-inside:avoid}.measurement-table-scroll{overflow:visible}.measurement-table .ltx_tabular{min-width:0;font-size:10pt}.measurement-table thead th{font-size:9pt}.measurement-table th,.measurement-table td{padding:9px 12px}}
