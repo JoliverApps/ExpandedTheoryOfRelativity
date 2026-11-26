@@ -26,8 +26,10 @@
   if (font && size && theme) {
     const controls = {font, size, theme};
     for (const [key, select] of Object.entries(controls)) {
-      const match = Array.from(select.options).find(option => option.value === saved[key]);
-      select.value = (match || select.options[0]).value;
+      const options = Array.from(select.options);
+      const match = options.find(option => option.value === saved[key]);
+      const defaultOption = options.find(option => option.defaultSelected) || options[0];
+      select.value = (match || defaultOption).value;
       select.disabled = false;
       select.addEventListener('change', () => applyPreferences(true));
     }
