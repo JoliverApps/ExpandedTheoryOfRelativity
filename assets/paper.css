@@ -71,9 +71,9 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .measurement-table-scroll{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
 .measurement-table-scroll:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 .measurement-table .ltx_tabular{width:100%;min-width:640px;border-collapse:collapse;border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);font-size:calc(16px * var(--reader-scale));line-height:1.55;font-variant-numeric:tabular-nums}
-.measurement-table th,.measurement-table td{padding:15px 18px;vertical-align:middle;white-space:nowrap;text-align:right}
+.measurement-table th,.measurement-table td{padding:15px 18px;vertical-align:middle;white-space:nowrap;text-align:center}
 .measurement-table thead th{font-family:system-ui,sans-serif;font-weight:600;font-size:calc(14px * var(--reader-scale));color:var(--ink);background:color-mix(in srgb,var(--accent) 7%,var(--paper));border-bottom:1px solid var(--line)}
-.measurement-table th:first-child{text-align:left}
+.measurement-table thead tr:first-child th:first-child,.measurement-table tbody th[scope="row"]{text-align:left}
 .measurement-table tbody th{font-weight:400}
 .measurement-table tbody tr+tr{border-top:1px solid var(--line)}
 .measurement-table tbody tr:nth-child(even){background:color-mix(in srgb,var(--accent) 3%,var(--paper))}
