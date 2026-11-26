@@ -2,32 +2,36 @@
 (() => {
   'use strict';
   const root = document.documentElement;
+  const font = document.getElementById('reader-font');
   const size = document.getElementById('reader-text-size');
   const theme = document.getElementById('reader-theme');
   const status = document.getElementById('reader-status');
   const preferenceKey = 'relativity-reader-preferences';
-  const validSizes = ['1', '1.15', '1.3'];
-  const validThemes = ['auto', 'light', 'dark'];
   let saved = {};
   try { saved = JSON.parse(localStorage.getItem(preferenceKey) || '{}') || {}; } catch (_) {}
 
   function applyPreferences(announce) {
+    root.dataset.readerFont = font.value;
     root.style.setProperty('--reader-scale', size.value);
     if (theme.value === 'auto') delete root.dataset.readerTheme;
     else root.dataset.readerTheme = theme.value;
     if (announce && status) {
-      status.textContent = `Reading options updated: ${size.selectedOptions[0].text}, ${theme.selectedOptions[0].text}.`;
+      const labels = [font, size, theme].map(select => select.selectedOptions[0].text);
+      status.textContent = `Reading options updated: ${labels.join(', ')}.`;
     }
-    try { localStorage.setItem(preferenceKey, JSON.stringify({size: size.value, theme: theme.value})); } catch (_) {}
+    try {
+      localStorage.setItem(preferenceKey, JSON.stringify({font: font.value, size: size.value, theme: theme.value}));
+    } catch (_) {}
   }
-  if (size && theme) {
-    size.value = validSizes.includes(saved.size) ? saved.size : '1';
-    theme.value = validThemes.includes(saved.theme) ? saved.theme : 'auto';
+  if (font && size && theme) {
+    const controls = {font, size, theme};
+    for (const [key, select] of Object.entries(controls)) {
+      const match = Array.from(select.options).find(option => option.value === saved[key]);
+      select.value = (match || select.options[0]).value;
+      select.disabled = false;
+      select.addEventListener('change', () => applyPreferences(true));
+    }
     applyPreferences(false);
-    size.disabled = false;
-    theme.disabled = false;
-    size.addEventListener('change', () => applyPreferences(true));
-    theme.addEventListener('change', () => applyPreferences(true));
   }
 
   // Only scrollable equations become keyboard stops and labelled regions.

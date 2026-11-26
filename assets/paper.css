@@ -27,8 +27,67 @@
   font-display: swap;
 }
 
-:root{--ink:#1c2939;--muted:#596778;--line:#dce2e8;--accent:#24577b;--paper:#fff;--serif:"Computer Modern",Georgia,"Times New Roman",serif}
-*{box-sizing:border-box}html{scroll-behavior:auto;scroll-padding-top:105px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.7}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.reader-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 34px;border-bottom:1px solid var(--line);background:#fffffff5;backdrop-filter:blur(8px);font-family:system-ui,sans-serif;font-size:13px}.site-name{font-size:15px;font-weight:650;letter-spacing:.01em;color:var(--ink)}.reader-contents{position:fixed;top:92px;bottom:24px;width:280px;padding:12px 22px 20px 30px;overflow-y:auto;font:12px/1.6 system-ui,sans-serif;border-right:1px solid var(--line)}.reader-contents .ltx_TOC{margin:0}.reader-contents .ltx_title{font:600 12px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 18px}.reader-contents ol{list-style:none;padding-left:0}.reader-contents li{margin:0 0 10px}.reader-contents li ol{padding-left:13px;margin-top:7px}.reader-contents li ol li{margin-bottom:6px}.reader-contents .ltx_tag{color:#7b8590;margin-right:3px}.ltx_page_main{margin:0 0 0 280px;padding:0 45px;max-width:none;min-width:0}.ltx_page_content{margin:0 auto;padding:54px 0 80px;max-width:900px;min-width:0}.ltx_document{max-width:none}.ltx_title_document{font:700 clamp(28px,3.2vw,43px)/1.2 var(--serif);text-align:left;letter-spacing:-.022em;margin:0 0 26px;max-width:880px}.ltx_authors{text-align:left;font:14px/1.7 system-ui,sans-serif;margin:0 0 12px}.ltx_personname{font-weight:600}.ltx_author_notes{display:block;margin-top:10px;color:var(--muted);font-weight:400}.ltx_dates{text-align:left;font:13px system-ui,sans-serif;color:var(--muted);margin:18px 0 32px}.ltx_abstract{margin:0;padding:24px 0 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:17px}.ltx_title_abstract{text-align:left;text-transform:uppercase;letter-spacing:.12em;font:600 12px system-ui,sans-serif;margin:0 0 14px}.ltx_keywords{font:12px/1.7 system-ui,sans-serif;color:var(--muted);margin:18px 0 42px}.ltx_section{margin-top:42px}.ltx_title_section,.ltx_title_appendix,.ltx_title_bibliography{font:700 27px/1.3 var(--serif);border-top:1px solid var(--line);padding-top:24px;margin:42px 0 22px}.ltx_title_subsection{font:600 20px/1.4 var(--serif);margin:30px 0 14px}.ltx_title_subsubsection{font:600 17px/1.5 var(--serif);margin:24px 0 12px}.ltx_title .ltx_tag{margin-right:7px}.ltx_p{text-align:left;margin:0 0 1em;hyphens:auto}.ltx_Math{font-family:"Latin Modern Math",math,"Cambria Math","STIX Two Math",serif}.ltx_equation,.ltx_equationgroup{max-width:none;min-width:100%;margin:1.1em 0}.equation-scroll{overflow-x:auto;max-width:100%;margin:14px 0;padding:2px 0}.equation-scroll .ltx_eqn_cell{padding-top:4px;padding-bottom:4px}.ltx_eqn_eqno{padding-left:18px!important;white-space:nowrap;font-size:14px}.ltx_figure{margin:32px auto;max-width:100%;text-align:center}.ltx_figure svg{display:block;width:100%;height:auto;max-width:580px;margin:auto;font-size:10px}.ltx_caption{font-size:14px;line-height:1.65;text-align:left;margin-top:18px}.ltx_biblist{padding-left:0;list-style:none;font-size:14px;line-height:1.7}.ltx_bibitem{position:relative;margin:0 0 18px;padding-left:38px}.ltx_tag_bibitem{position:absolute;left:0;top:0}.ltx_bibblock{display:block}.ltx_page_footer{display:none}.ltx_note_frontmatter{display:none}section[id],table[id],tr[id]{scroll-margin-top:110px}math{font-size:1em}
+@font-face {
+  font-family: "D-DIN";
+  src: url("fonts/D-DIN.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "D-DIN";
+  src: url("fonts/D-DIN-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "D-DIN";
+  src: url("fonts/D-DIN-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-wght-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("fonts/stix-two-text-latin-wght-normal.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("fonts/stix-two-text-latin-wght-italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Baskervville";
+  src: url("fonts/baskervville-latin-wght-normal.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Baskervville";
+  src: url("fonts/baskervville-latin-wght-italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root{--ink:#1c2939;--muted:#596778;--line:#dce2e8;--accent:#24577b;--paper:#fff;--reader-font:"Computer Modern",Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}html{scroll-behavior:auto;scroll-padding-top:105px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--reader-font);font-size:18px;line-height:1.7}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.reader-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 34px;border-bottom:1px solid var(--line);background:#fffffff5;backdrop-filter:blur(8px);font-family:system-ui,sans-serif;font-size:13px}.site-name{font-size:15px;font-weight:650;letter-spacing:.01em;color:var(--ink)}.reader-contents{position:fixed;top:92px;bottom:24px;width:280px;padding:12px 22px 20px 30px;overflow-y:auto;font:12px/1.6 system-ui,sans-serif;border-right:1px solid var(--line)}.reader-contents .ltx_TOC{margin:0}.reader-contents .ltx_title{font:600 12px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 18px}.reader-contents ol{list-style:none;padding-left:0}.reader-contents li{margin:0 0 10px}.reader-contents li ol{padding-left:13px;margin-top:7px}.reader-contents li ol li{margin-bottom:6px}.reader-contents .ltx_tag{color:#7b8590;margin-right:3px}.ltx_page_main{margin:0 0 0 280px;padding:0 45px;max-width:none;min-width:0}.ltx_page_content{margin:0 auto;padding:54px 0 80px;max-width:900px;min-width:0}.ltx_document{max-width:none}.ltx_title_document{font:700 clamp(28px,3.2vw,43px)/1.2 var(--reader-font);text-align:left;letter-spacing:-.022em;margin:0 0 26px;max-width:880px}.ltx_authors{text-align:left;font:14px/1.7 system-ui,sans-serif;margin:0 0 12px}.ltx_personname{font-weight:600}.ltx_author_notes{display:block;margin-top:10px;color:var(--muted);font-weight:400}.ltx_dates{text-align:left;font:13px system-ui,sans-serif;color:var(--muted);margin:18px 0 32px}.ltx_abstract{margin:0;padding:24px 0 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:17px}.ltx_title_abstract{text-align:left;text-transform:uppercase;letter-spacing:.12em;font:600 12px system-ui,sans-serif;margin:0 0 14px}.ltx_keywords{font:12px/1.7 system-ui,sans-serif;color:var(--muted);margin:18px 0 42px}.ltx_section{margin-top:42px}.ltx_title_section,.ltx_title_appendix,.ltx_title_bibliography{font:700 27px/1.3 var(--reader-font);border-top:1px solid var(--line);padding-top:24px;margin:42px 0 22px}.ltx_title_subsection{font:600 20px/1.4 var(--reader-font);margin:30px 0 14px}.ltx_title_subsubsection{font:600 17px/1.5 var(--reader-font);margin:24px 0 12px}.ltx_title .ltx_tag{margin-right:7px}.ltx_p{text-align:left;margin:0 0 1em;hyphens:auto}.ltx_Math{font-family:"Latin Modern Math",math,"Cambria Math","STIX Two Math",serif}.ltx_equation,.ltx_equationgroup{max-width:none;min-width:100%;margin:1.1em 0}.equation-scroll{overflow-x:auto;max-width:100%;margin:14px 0;padding:2px 0}.equation-scroll .ltx_eqn_cell{padding-top:4px;padding-bottom:4px}.ltx_eqn_eqno{padding-left:18px!important;white-space:nowrap;font-size:14px}.ltx_figure{margin:32px auto;max-width:100%;text-align:center}.ltx_figure svg{display:block;width:100%;height:auto;max-width:580px;margin:auto;font-size:10px}.ltx_caption{font-size:14px;line-height:1.65;text-align:left;margin-top:18px}.ltx_biblist{padding-left:0;list-style:none;font-size:14px;line-height:1.7}.ltx_bibitem{position:relative;margin:0 0 18px;padding-left:38px}.ltx_tag_bibitem{position:absolute;left:0;top:0}.ltx_bibblock{display:block}.ltx_page_footer{display:none}.ltx_note_frontmatter{display:none}section[id],table[id],tr[id]{scroll-margin-top:110px}math{font-size:1em}
 @media(min-width:1500px){.ltx_page_content{max-width:980px}.reader-contents{width:300px}.ltx_page_main{margin-left:300px;padding:0 72px}}
 @media(max-width:1050px){.reader-contents{position:static;width:auto;max-height:310px;margin:26px 28px 0;padding:20px;border:1px solid var(--line);border-radius:5px}.reader-contents .ltx_toclist_subsection{display:none}.reader-contents .ltx_toclist_section{display:none}.ltx_page_main{margin:0;padding:0 28px}.ltx_page_content{padding-top:30px}.reader-header{padding:16px 24px;flex-wrap:wrap;gap:12px}.ltx_title_document{font-size:34px}}
 @media(max-width:580px){body{font-size:17px}.reader-header{position:static;padding:18px 20px}.site-name{font-size:14px}.ltx_page_main{padding:0 20px}.reader-contents{margin:22px 20px 0}.ltx_title_document{font-size:29px}.ltx_title_section,.ltx_title_appendix{font-size:24px}.ltx_abstract{font-size:16px}.equation-scroll{font-size:15px}.ltx_authors{font-size:13px}}
@@ -36,10 +95,19 @@
 
 .ltx_role_author{text-align:left}.ltx_authors_1line .ltx_author_notes{display:block}.ltx_authors_1line .ltx_author_notes:before{content:none}.ltx_authors_1line .ltx_author_notes span,.ltx_authors_1line .ltx_author_notes:hover span{display:block;position:static;background:transparent;text-align:left;border:0;border-radius:0;box-shadow:none}.ltx_bibitem .ltx_tag_bibitem{margin-left:0;width:32px}
 
+/* Reader typefaces apply to manuscript text. Math and controls have their own fonts. */
+:root[data-reader-font="georgia"]{--reader-font:Georgia,"Times New Roman",serif}
+:root[data-reader-font="din"]{--reader-font:"D-DIN",Arial,sans-serif}
+:root[data-reader-font="source-serif"]{--reader-font:"Source Serif 4",Georgia,serif}
+:root[data-reader-font="stix"]{--reader-font:"STIX Two Text",Georgia,serif}
+:root[data-reader-font="baskervville"]{--reader-font:"Baskervville",Georgia,serif}
+
 /* Keyboard navigation, reading preferences, and small-screen access. */
-:root{--reader-scale:1;--header-bg:#fffffff5;}
+:root{--reader-scale:1.15;--header-bg:#fffffff5;}
 body{font-size:calc(18px * var(--reader-scale))}
 .reader-header{background:var(--header-bg)}
+.reader-visits{display:flex;align-items:baseline;gap:.45em;margin-left:auto;color:var(--muted)}
+#visit-count{font-weight:650;font-variant-numeric:tabular-nums;color:var(--ink)}
 
 .ltx_abstract{font-size:calc(17px * var(--reader-scale))}
 .ltx_caption,.ltx_biblist{font-size:calc(14px * var(--reader-scale))}
@@ -55,20 +123,11 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .skip-links a{background:var(--paper);color:var(--ink);border:2px solid var(--accent);padding:10px 16px;font:600 15px/1.5 system-ui,sans-serif}
 .reader-contents .ltx_tag{color:var(--muted)}
 .reader-contents a{display:block;padding:3px 0}
-.reading-options,.reader-statistics{border-top:1px solid var(--line);margin-top:22px;padding-top:18px;color:var(--ink)}
+.reading-options{border-top:1px solid var(--line);margin-top:22px;padding-top:18px;color:var(--ink)}
 .reading-options summary{cursor:pointer;font-weight:600;min-height:32px;padding:4px 0}
 .reading-options label{display:block;margin:14px 0 6px;font-size:13px}
 .reading-options select{display:block;width:100%;min-height:44px;padding:8px;border:1px solid var(--muted);border-radius:4px;background:var(--paper);color:var(--ink);font:14px system-ui,sans-serif}
-.reader-statistics h2{font:600 13px/1.5 system-ui,sans-serif;margin:0 0 12px}
-.reader-statistics dl{margin:0}.reader-statistics dl div{display:flex;gap:12px;justify-content:space-between;align-items:baseline;margin:8px 0}
-.reader-statistics dt{font-weight:400}.reader-statistics dd{font-weight:650;margin:0;font-variant-numeric:tabular-nums}
-.reader-statistics p{font-size:11px;line-height:1.65;color:var(--muted);margin:14px 0 0}
-.reader-statistics p a{display:inline}
 .reader-contents>.reading-options{margin:0 0 18px;padding:0 0 14px;border-top:0;border-bottom:1px solid var(--line)}
-#paper .reader-statistics{margin:0;padding:16px 0;font:13px/1.6 system-ui,sans-serif}
-#paper .reader-statistics dl{display:flex;flex-wrap:wrap;gap:8px 30px}
-#paper .reader-statistics dl div{display:flex;gap:12px;margin:0}
-#paper .reader-statistics p{margin:8px 0 0;font-size:11px}
 .ltx_bibitem,.ltx_bibitem a,.ltx_bibitem span{overflow-wrap:anywhere;white-space:normal}
 .ltx_figure svg{background:#fff;color:#111;border-radius:4px;padding:12px}
 .equation-scroll{overscroll-behavior-x:contain}
@@ -91,7 +150,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 @media(forced-colors:active){a:focus-visible,select:focus-visible,summary:focus-visible,.equation-scroll:focus-visible{outline:3px solid Highlight}}
 @media print{
   :root,:root[data-reader-theme],:root:not([data-reader-theme="light"]){--ink:#000;--muted:#333;--line:#aaa;--accent:#000;--paper:#fff;color-scheme:light}
-  .skip-links,.reading-options,.reader-statistics{display:none!important}
+  .skip-links,.reading-options{display:none!important}
   .ltx_figure svg{padding:0}.ltx_p{color:#000}
 }
 
@@ -101,7 +160,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .measurement-table-scroll:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 .measurement-table .ltx_tabular{width:100%;min-width:640px;border-collapse:collapse;border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);font-size:calc(16px * var(--reader-scale));line-height:1.55;font-variant-numeric:tabular-nums}
 .measurement-table th,.measurement-table td{padding:15px 18px;vertical-align:middle;white-space:nowrap;text-align:center}
-.measurement-table thead th{font-family:var(--serif);font-weight:600;font-size:calc(14px * var(--reader-scale));color:var(--ink);background:color-mix(in srgb,var(--accent) 7%,var(--paper));border-bottom:1px solid var(--line)}
+.measurement-table thead th{font-family:var(--reader-font);font-weight:600;font-size:calc(14px * var(--reader-scale));color:var(--ink);background:color-mix(in srgb,var(--accent) 7%,var(--paper));border-bottom:1px solid var(--line)}
 .measurement-table thead tr:first-child th:first-child,.measurement-table tbody th[scope="row"]{text-align:left}
 .measurement-table tbody th{font-weight:400}
 .measurement-table tbody tr+tr{border-top:1px solid var(--line)}
