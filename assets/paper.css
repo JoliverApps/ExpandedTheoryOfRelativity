@@ -22,6 +22,11 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Manuscript Small Cap";
+  src: url("fonts/ManuscriptSmallCap.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
   font-family: "Manuscript Math Alphabets";
   src: url("fonts/ManuscriptMathAlphabets.woff") format("woff");
   font-display: swap;
@@ -173,3 +178,4 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 
 /* Calligraphic, Fraktur and double-struck glyphs from the manuscript fonts. */
 .ltx_Math .manuscript-math-alphabet{font-family:"Manuscript Math Alphabets","Latin Modern Math",math,serif}
+.ltx_Math .represented-plane-bivector{font-family:"Manuscript Small Cap","Latin Modern Math",math,serif}

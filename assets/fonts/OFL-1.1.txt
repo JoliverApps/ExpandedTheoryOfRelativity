@@ -1,6 +1,6 @@
 Computer Modern, MSBM, and Euler glyph outlines
 Copyright (c) 1997, 2009, 2011 American Mathematical Society (https://www.ams.org/).
-Original Reserved Font Names: CMR10, CMBX10, CMTI10, EUFM10, MSBM10.
+Original Reserved Font Names: CMR10, CMBX10, CMTI10, CMCSC10, EUFM10, MSBM10.
 
 Boondox Calligraphic glyph outlines, adapted from STIX by Michael Sharpe
 Copyright (c) 2001-2010 by the STI Pub Companies, consisting of the American
@@ -17,7 +17,7 @@ Phone: (718) 575-1816.
 
 Portions copyright (c) 1990 by Elsevier, Inc.
 
-The web conversions have the internal family names Manuscript Roman and Manuscript Math Alphabets.
+The web conversions have the internal family names Manuscript Roman, Manuscript Math Alphabets, and Manuscript Small Cap.
 These fonts are distributed under the SIL Open Font License, Version 1.1.
 
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
